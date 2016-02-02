@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class RWTItem;
+@class TQNItem;
 
-typedef void(^RWTItemAddedCompletion)(RWTItem *newItem);
+typedef void(^RWTItemAddedCompletion)(TQNItem *newItem);
 
 @interface RWTAddItemViewController : UITableViewController
 

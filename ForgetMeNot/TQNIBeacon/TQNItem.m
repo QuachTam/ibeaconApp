@@ -1,19 +1,19 @@
 //
-//  RWTItem.m
+//  TQNItem.m
 //  ForgetMeNot
 //
-//  Created by Chris Wagner on 1/29/14.
-//  Copyright (c) 2014 Ray Wenderlich Tutorial Team. All rights reserved.
+//  Created by Tamqn on 1/21/16.
+//  Copyright © 2016 Ray Wenderlich Tutorial Team. All rights reserved.
 //
 
-#import "RWTItem.h"
+#import "TQNItem.h"
 
 static NSString * const kRWTItemNameKey = @"name";
 static NSString * const kRWTItemUUIDKey = @"uuid";
 static NSString * const kRWTItemMajorValueKey = @"major";
 static NSString * const kRWTItemMinorValueKey = @"minor";
 
-@implementation RWTItem
+@implementation TQNItem
 
 - (instancetype)initWithName:(NSString *)name
                         uuid:(NSUUID *)uuid
@@ -24,12 +24,12 @@ static NSString * const kRWTItemMinorValueKey = @"minor";
     if (!self) {
         return nil;
     }
-
+    
     _name = name;
     _uuid = uuid;
     _majorValue = major;
     _minorValue = minor;
-
+    
     return self;
 }
 
@@ -57,14 +57,20 @@ static NSString * const kRWTItemMinorValueKey = @"minor";
 }
 
 - (BOOL)isEqualToCLBeacon:(CLBeacon *)beacon {
-    if ([[beacon.proximityUUID UUIDString] isEqualToString:[self.uuid UUIDString]] &&
-        [beacon.major isEqual: @(self.majorValue)] &&
-        [beacon.minor isEqual: @(self.minorValue)])
+    if ([[beacon.proximityUUID UUIDString] isEqualToString:[self.uuid UUIDString]])
     {
         return YES;
     } else {
         return NO;
     }
+    //    if ([[beacon.proximityUUID UUIDString] isEqualToString:[self.uuid UUIDString]] &&
+    //        [beacon.major isEqual: @(self.majorValue)] &&
+    //        [beacon.minor isEqual: @(self.minorValue)])
+    //    {
+    //        return YES;
+    //    } else {
+    //        return NO;
+    //    }
 }
 
 @end

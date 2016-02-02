@@ -23,7 +23,9 @@
 		83EC54D81898DD3600EA1765 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83EC54D61898DD3600EA1765 /* InfoPlist.strings */; };
 		83EC54DA1898DD3600EA1765 /* ForgetMeNotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC54D91898DD3600EA1765 /* ForgetMeNotTests.m */; };
 		83EC54E81898E05E00EA1765 /* RWTAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC54E71898E05E00EA1765 /* RWTAddItemViewController.m */; };
-		83EC54EB1898E13900EA1765 /* RWTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EC54EA1898E13900EA1765 /* RWTItem.m */; };
+		FBD79E591C507C690023ABDB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD79E581C507C690023ABDB /* CoreLocation.framework */; };
+		FBD79E651C509D740023ABDB /* TQNIBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD79E621C509D740023ABDB /* TQNIBeacon.m */; };
+		FBD79E661C509D740023ABDB /* TQNItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD79E641C509D740023ABDB /* TQNItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 /* Begin PBXFileReference section */
 		8391CE4C189A4D4F0072A2D3 /* RWTItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTItemCell.h; sourceTree = "<group>"; };
 		8391CE4D189A4D4F0072A2D3 /* RWTItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTItemCell.m; sourceTree = "<group>"; };
-		83EC54AB1898DD3600EA1765 /* ForgetMeNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForgetMeNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83EC54AB1898DD3600EA1765 /* BeaconReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EC54AE1898DD3600EA1765 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83EC54B01898DD3600EA1765 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		83EC54B21898DD3600EA1765 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -60,8 +62,11 @@
 		83EC54D91898DD3600EA1765 /* ForgetMeNotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetMeNotTests.m; sourceTree = "<group>"; };
 		83EC54E61898E05E00EA1765 /* RWTAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTAddItemViewController.h; sourceTree = "<group>"; };
 		83EC54E71898E05E00EA1765 /* RWTAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTAddItemViewController.m; sourceTree = "<group>"; };
-		83EC54E91898E13900EA1765 /* RWTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTItem.h; sourceTree = "<group>"; };
-		83EC54EA1898E13900EA1765 /* RWTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTItem.m; sourceTree = "<group>"; };
+		FBD79E581C507C690023ABDB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FBD79E611C509D740023ABDB /* TQNIBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQNIBeacon.h; sourceTree = "<group>"; };
+		FBD79E621C509D740023ABDB /* TQNIBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQNIBeacon.m; sourceTree = "<group>"; };
+		FBD79E631C509D740023ABDB /* TQNItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQNItem.h; sourceTree = "<group>"; };
+		FBD79E641C509D740023ABDB /* TQNItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQNItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD79E591C507C690023ABDB /* CoreLocation.framework in Frameworks */,
 				83EC54B11898DD3600EA1765 /* CoreGraphics.framework in Frameworks */,
 				83EC54B31898DD3600EA1765 /* UIKit.framework in Frameworks */,
 				83EC54AF1898DD3600EA1765 /* Foundation.framework in Frameworks */,
@@ -101,7 +107,7 @@
 		83EC54AC1898DD3600EA1765 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83EC54AB1898DD3600EA1765 /* ForgetMeNot.app */,
+				83EC54AB1898DD3600EA1765 /* BeaconReceiver.app */,
 				83EC54CC1898DD3600EA1765 /* ForgetMeNotTests.xctest */,
 			);
 			name = Products;
@@ -110,6 +116,7 @@
 		83EC54AD1898DD3600EA1765 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FBD79E581C507C690023ABDB /* CoreLocation.framework */,
 				83EC54AE1898DD3600EA1765 /* Foundation.framework */,
 				83EC54B01898DD3600EA1765 /* CoreGraphics.framework */,
 				83EC54B21898DD3600EA1765 /* UIKit.framework */,
@@ -127,10 +134,9 @@
 				83EC54E71898E05E00EA1765 /* RWTAddItemViewController.m */,
 				83EC54BD1898DD3600EA1765 /* RWTAppDelegate.h */,
 				83EC54BE1898DD3600EA1765 /* RWTAppDelegate.m */,
-				83EC54E91898E13900EA1765 /* RWTItem.h */,
-				83EC54EA1898E13900EA1765 /* RWTItem.m */,
 				83EC54C31898DD3600EA1765 /* RWTItemsViewController.h */,
 				83EC54C41898DD3600EA1765 /* RWTItemsViewController.m */,
+				FBD79E601C509D740023ABDB /* TQNIBeacon */,
 				83EC54B51898DD3600EA1765 /* Supporting Files */,
 				8391CE4C189A4D4F0072A2D3 /* RWTItemCell.h */,
 				8391CE4D189A4D4F0072A2D3 /* RWTItemCell.m */,
@@ -167,6 +173,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FBD79E601C509D740023ABDB /* TQNIBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				FBD79E611C509D740023ABDB /* TQNIBeacon.h */,
+				FBD79E621C509D740023ABDB /* TQNIBeacon.m */,
+				FBD79E631C509D740023ABDB /* TQNItem.h */,
+				FBD79E641C509D740023ABDB /* TQNItem.m */,
+			);
+			path = TQNIBeacon;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,7 +201,7 @@
 			);
 			name = ForgetMeNot;
 			productName = ForgetMeNot;
-			productReference = 83EC54AB1898DD3600EA1765 /* ForgetMeNot.app */;
+			productReference = 83EC54AB1898DD3600EA1765 /* BeaconReceiver.app */;
 			productType = "com.apple.product-type.application";
 		};
 		83EC54CB1898DD3600EA1765 /* ForgetMeNotTests */ = {
@@ -215,6 +232,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Ray Wenderlich Tutorial Team";
 				TargetAttributes = {
+					83EC54AA1898DD3600EA1765 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					83EC54CB1898DD3600EA1765 = {
 						TestTargetID = 83EC54AA1898DD3600EA1765;
 					};
@@ -267,8 +291,9 @@
 			files = (
 				8391CE4E189A4D4F0072A2D3 /* RWTItemCell.m in Sources */,
 				83EC54C51898DD3600EA1765 /* RWTItemsViewController.m in Sources */,
+				FBD79E651C509D740023ABDB /* TQNIBeacon.m in Sources */,
+				FBD79E661C509D740023ABDB /* TQNItem.m in Sources */,
 				83EC54E81898E05E00EA1765 /* RWTAddItemViewController.m in Sources */,
-				83EC54EB1898E13900EA1765 /* RWTItem.m in Sources */,
 				83EC54BF1898DD3600EA1765 /* RWTAppDelegate.m in Sources */,
 				83EC54BB1898DD3600EA1765 /* main.m in Sources */,
 			);
@@ -400,7 +425,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ForgetMeNot/ForgetMeNot-Prefix.pch";
 				INFOPLIST_FILE = "ForgetMeNot/ForgetMeNot-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BeaconReceiver;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -413,7 +438,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ForgetMeNot/ForgetMeNot-Prefix.pch";
 				INFOPLIST_FILE = "ForgetMeNot/ForgetMeNot-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BeaconReceiver;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,7 +7,7 @@
 //
 
 #import "RWTItemCell.h"
-#import "RWTItem.h"
+#import "TQNItem.h"
 
 @implementation RWTItemCell
 
@@ -16,7 +16,7 @@
     self.item = nil;
 }
 
-- (void)setItem:(RWTItem *)item {
+- (void)setItem:(TQNItem *)item {
     if (_item) {
         [_item removeObserver:self forKeyPath:@"lastSeenBeacon"];
     }
@@ -26,7 +26,7 @@
             forKeyPath:@"lastSeenBeacon"
                options:NSKeyValueObservingOptionNew
                context:NULL];
-    self.textLabel.text = _item.name;
+    self.labelName.text = _item.name;
 }
 
 - (NSString *)nameForProximity:(CLProximity)proximity {
@@ -52,7 +52,8 @@
                        context:(void *)context {
     if ([object isEqual:self.item] && [keyPath isEqualToString:@"lastSeenBeacon"]) {
         NSString *proximity = [self nameForProximity:self.item.lastSeenBeacon.proximity];
-        self.detailTextLabel.text = [NSString stringWithFormat:@"Location: %@", proximity];
+        CLBeacon *ibeacon = [change valueForKey:@"new"];
+        self.labelDetail.text = [NSString stringWithFormat:@"Location: %@ - major: %@ --- minor:%@", proximity, [[change valueForKey:@"new"] valueForKey:@"major"], [[change valueForKey:@"new"] valueForKey:@"minor"]];
     }
 }
 

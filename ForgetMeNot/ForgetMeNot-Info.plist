@@ -24,6 +24,19 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>s</string>
+	<key>NSLocationAlwaysUsageDescription - 2</key>
+	<string>ssss</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>ssss</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-peripheral</string>
+		<string>fetch</string>
+		<string>location</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

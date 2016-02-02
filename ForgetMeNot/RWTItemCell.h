@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class RWTItem;
+@class TQNItem;
 
 @interface RWTItemCell : UITableViewCell
-
-@property (strong, nonatomic) RWTItem *item;
+@property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UILabel *labelDetail;
+@property (strong, nonatomic) TQNItem *item;
 
 @end

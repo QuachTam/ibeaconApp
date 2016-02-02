@@ -1,15 +1,16 @@
 //
-//  RWTItem.h
+//  TQNItem.h
 //  ForgetMeNot
 //
-//  Created by Chris Wagner on 1/29/14.
-//  Copyright (c) 2014 Ray Wenderlich Tutorial Team. All rights reserved.
+//  Created by Tamqn on 1/21/16.
+//  Copyright © 2016 Ray Wenderlich Tutorial Team. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
 @import  CoreLocation;
 
-@interface RWTItem : NSObject <NSCoding>
+@interface TQNItem : NSObject <NSCoding>
 
 @property (strong, nonatomic, readonly) NSString *name;
 @property (strong, nonatomic, readonly) NSUUID *uuid;

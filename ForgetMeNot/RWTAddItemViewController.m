@@ -7,7 +7,7 @@
 //
 
 #import "RWTAddItemViewController.h"
-#import "RWTItem.h"
+#import "TQNItem.h"
 
 @interface RWTAddItemViewController ()
 
@@ -36,6 +36,7 @@
     self.uuidRegex = [NSRegularExpression regularExpressionWithPattern:uuidPatternString
                                                                options:NSRegularExpressionCaseInsensitive
                                                                  error:nil];
+    self.uuidTextField.text = @"A77A1B68-49A7-4DBF-914C-760D07FBB87B";
 }
 
 - (void)nameTextFieldChanged:(UITextField *)textField {
@@ -68,7 +69,7 @@
 - (IBAction)save:(id)sender {
     if (self.itemAddedCompletion) {
         NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:self.uuidTextField.text];
-        RWTItem *newItem = [[RWTItem alloc] initWithName:self.nameTextField.text
+        TQNItem *newItem = [[TQNItem alloc] initWithName:self.nameTextField.text
                                                     uuid:uuid
                                                    major:[self.majorIdTextField.text intValue]
                                                    minor:[self.minorIdTextField.text intValue]];
